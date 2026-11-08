@@ -1,0 +1,7 @@
+persona,tasks_per_month,comparator,monthly_api_bill,rent_36mo_discounted,own_36mo_discounted,own_over_rent
+Individual developer,50000,Haiku 5.5,12.5,89,259915,2923.58
+Individual developer (frontier quality),50000,Sonnet 5.5,250.0,1778,259915,146.18
+Small software company,2000000,Sonnet 5.5,10000.0,71122,259915,3.65
+Medium-sized business,20000000,Sonnet 5.5,100000.0,711222,269512,0.38
+Large enterprise (one task),200000000,Sonnet 5.5,1000000.0,7112220,747383,0.11
+Small company that only needs small-model quality,2000000,Haiku 5.5,500.0,3556,259915,73.09

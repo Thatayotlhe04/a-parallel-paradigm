@@ -1,0 +1,72 @@
+{
+  "defaults_missing_assistant": {
+    "exception": null,
+    "stage": "completed",
+    "train_loss": 7.569375991821289,
+    "config": "defaults (assistant_only_loss=False)",
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 16/16 [00:00<00:00, 5193.38 examples/s]"
+    ]
+  },
+  "defaults_unknown_role": {
+    "exception": null,
+    "stage": "completed",
+    "train_loss": 7.5849480628967285,
+    "config": "defaults (assistant_only_loss=False)",
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 16/16 [00:00<00:00, 4805.50 examples/s]"
+    ]
+  },
+  "defaults_empty_response": {
+    "exception": null,
+    "stage": "completed",
+    "train_loss": 7.569514989852905,
+    "config": "defaults (assistant_only_loss=False)",
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 16/16 [00:00<00:00, 5673.25 examples/s]"
+    ]
+  },
+  "trl_truncation_default": {
+    "exception": null,
+    "stage": "completed",
+    "max_len_after": 1024,
+    "rows_at_cap": 40,
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/40 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 40/40 [00:00<00:00, 2130.01 examples/s]"
+    ]
+  },
+  "truncation_arithmetic": [
+    {
+      "max_length": 512,
+      "rows": 40,
+      "rows_over_limit": 40,
+      "rows_answer_fully_cut": 40,
+      "rows_answer_partly_cut": 0,
+      "assistant_tokens_kept_share": 0.0
+    },
+    {
+      "max_length": 1024,
+      "rows": 40,
+      "rows_over_limit": 40,
+      "rows_answer_fully_cut": 40,
+      "rows_answer_partly_cut": 0,
+      "assistant_tokens_kept_share": 0.0
+    },
+    {
+      "max_length": 2048,
+      "rows": 40,
+      "rows_over_limit": 40,
+      "rows_answer_fully_cut": 40,
+      "rows_answer_partly_cut": 0,
+      "assistant_tokens_kept_share": 0.0
+    }
+  ]
+}

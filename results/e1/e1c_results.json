@@ -1,0 +1,174 @@
+{
+  "summary": {
+    "total": 9963,
+    "unchanged": 9814,
+    "fixed": 50,
+    "dropped": 89,
+    "unparseable": 10,
+    "emitted": 9864
+  },
+  "fixes_by_rule": {
+    "empty-content": 20,
+    "secrets": 20,
+    "encoding": 10,
+    "pii": 20,
+    "context-window": 10,
+    "duplicates": 19,
+    "eval-overlap": 20
+  },
+  "fate": {
+    "whitespace_duplicate": {
+      "unchanged": 3,
+      "dropped": 7
+    },
+    "whitespace_response": {
+      "dropped": 10
+    },
+    "role_order": {
+      "dropped": 10
+    },
+    "eval_paraphrase": {
+      "unchanged": 10
+    },
+    "invalid_json": {
+      "unparseable": 10
+    },
+    "secret_github": {
+      "fixed": 10
+    },
+    "overlong_response": {
+      "dropped": 10
+    },
+    "near_duplicate": {
+      "unchanged": 10
+    },
+    "mojibake": {
+      "fixed": 10
+    },
+    "eval_exact": {
+      "dropped": 10
+    },
+    "exact_duplicate": {
+      "unchanged": 4,
+      "dropped": 6
+    },
+    "empty_response": {
+      "dropped": 10
+    },
+    "secret_aws": {
+      "fixed": 10
+    },
+    "pii_email": {
+      "fixed": 10
+    },
+    "missing_assistant": {
+      "dropped": 10
+    },
+    "eval_prompt_only": {
+      "dropped": 10
+    },
+    "label_swap": {
+      "unchanged": 10
+    },
+    "overlong_user": {
+      "fixed": 10
+    },
+    "truncated_response": {
+      "unchanged": 10
+    }
+  },
+  "rules": {
+    "whitespace_response": {
+      "empty-content": 10,
+      "roles": 10
+    },
+    "role_order": {
+      "roles": 10
+    },
+    "secret_github": {
+      "secrets": 10
+    },
+    "overlong_response": {
+      "context-window": 10
+    },
+    "mojibake": {
+      "encoding": 10
+    },
+    "eval_exact": {
+      "eval-overlap": 10
+    },
+    "exact_duplicate": {
+      "duplicates": 6
+    },
+    "empty_response": {
+      "empty-content": 10,
+      "roles": 10
+    },
+    "secret_aws": {
+      "secrets": 10
+    },
+    "pii_email": {
+      "pii": 20
+    },
+    "missing_assistant": {
+      "roles": 10
+    },
+    "eval_prompt_only": {
+      "eval-overlap": 10
+    },
+    "overlong_user": {
+      "context-window": 10
+    },
+    "whitespace_duplicate": {
+      "duplicates": 7
+    }
+  },
+  "clean": {
+    "unchanged": 9767,
+    "dropped": 6
+  },
+  "clean_not_unchanged": [
+    [
+      2040,
+      [
+        "duplicates"
+      ],
+      []
+    ],
+    [
+      2144,
+      [
+        "duplicates"
+      ],
+      []
+    ],
+    [
+      4386,
+      [
+        "duplicates"
+      ],
+      []
+    ],
+    [
+      5600,
+      [
+        "duplicates"
+      ],
+      []
+    ],
+    [
+      7087,
+      [
+        "duplicates"
+      ],
+      []
+    ],
+    [
+      7139,
+      [
+        "duplicates"
+      ],
+      []
+    ]
+  ]
+}

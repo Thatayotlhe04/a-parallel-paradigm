@@ -1,0 +1,179 @@
+{
+  "versions": {
+    "trl": "1.17.1",
+    "torch": "2.15.0+cu132",
+    "transformers": "5.22.2",
+    "datasets": "5.1.0"
+  },
+  "sft_control_clean": {
+    "exception": null,
+    "stage": "completed",
+    "train_loss": 7.611764430999756,
+    "loss_history": [
+      7.612205982208252,
+      7.61132287979126
+    ],
+    "rows_after_preprocess": 12,
+    "rows_with_zero_assistant_tokens": null,
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/12 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 12/12 [00:00<00:00, 4299.65 examples/s]"
+    ]
+  },
+  "sft_missing_assistant": {
+    "exception": "RuntimeError: You're using `assistant_only_loss=True`, but at least one example has no assistant tokens. This usually means the tokenizer's chat template doesn't generate assistant masks \u2014 it may be missing the `{% generation %}` keyword. Please check the template and ensure it's correctly configured to support a",
+    "stage": "preprocess",
+    "traceback_tail": [
+      "    ...<4 lines>...",
+      "    )",
+      "RuntimeError: You're using `assistant_only_loss=True`, but at least one example has no assistant tokens. This usually means the tokenizer's chat template doesn't generate assistant masks \u2014 it may be missing the `{% generation %}` keyword. Please check the template and ensure it's correctly configured to support assistant masking."
+    ],
+    "warnings": [],
+    "stderr_warn_lines": []
+  },
+  "sft_ends_on_user": {
+    "exception": null,
+    "stage": "completed",
+    "train_loss": 7.606886148452759,
+    "loss_history": [
+      7.608457088470459,
+      7.605315208435059
+    ],
+    "rows_after_preprocess": 16,
+    "rows_with_zero_assistant_tokens": null,
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 16/16 [00:00<00:00, 3971.64 examples/s]"
+    ]
+  },
+  "sft_consecutive_assistant": {
+    "exception": null,
+    "stage": "completed",
+    "train_loss": 7.604221820831299,
+    "loss_history": [
+      7.605099201202393,
+      7.603344440460205
+    ],
+    "rows_after_preprocess": 16,
+    "rows_with_zero_assistant_tokens": null,
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 16/16 [00:00<00:00, 5025.38 examples/s]"
+    ]
+  },
+  "sft_assistant_first": {
+    "exception": null,
+    "stage": "completed",
+    "train_loss": 7.6082305908203125,
+    "loss_history": [
+      7.611127853393555,
+      7.60533332824707
+    ],
+    "rows_after_preprocess": 16,
+    "rows_with_zero_assistant_tokens": null,
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 16/16 [00:00<00:00, 3122.07 examples/s]"
+    ]
+  },
+  "sft_empty_response": {
+    "exception": null,
+    "stage": "completed",
+    "train_loss": 7.611544609069824,
+    "loss_history": [
+      7.614392280578613,
+      7.608696937561035
+    ],
+    "rows_after_preprocess": 16,
+    "rows_with_zero_assistant_tokens": null,
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 16/16 [00:00<00:00, 5197.81 examples/s]"
+    ]
+  },
+  "sft_unknown_role": {
+    "exception": "RuntimeError: You're using `assistant_only_loss=True`, but at least one example has no assistant tokens. This usually means the tokenizer's chat template doesn't generate assistant masks \u2014 it may be missing the `{% generation %}` keyword. Please check the template and ensure it's correctly configured to support a",
+    "stage": "preprocess",
+    "traceback_tail": [
+      "    ...<4 lines>...",
+      "    )",
+      "RuntimeError: You're using `assistant_only_loss=True`, but at least one example has no assistant tokens. This usually means the tokenizer's chat template doesn't generate assistant masks \u2014 it may be missing the `{% generation %}` keyword. Please check the template and ensure it's correctly configured to support assistant masking."
+    ],
+    "warnings": [],
+    "stderr_warn_lines": []
+  },
+  "sft_exact_duplicates": {
+    "exception": null,
+    "stage": "completed",
+    "train_loss": 7.609430313110352,
+    "loss_history": [
+      7.611426830291748,
+      7.607433795928955
+    ],
+    "rows_after_preprocess": 52,
+    "rows_with_zero_assistant_tokens": null,
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/52 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 52/52 [00:00<00:00, 8803.74 examples/s]"
+    ]
+  },
+  "load_invalid_json": {
+    "exception": "DatasetGenerationError: An error occurred while generating the dataset",
+    "stage": "load",
+    "traceback_tail": [
+      "  File \"/home/claude/paper/.venv/lib/python3.13/site-packages/datasets/builder.py\", line 1879, in _prepare_split_single",
+      "    raise DatasetGenerationError(\"An error occurred while generating the dataset\") from e",
+      "datasets.exceptions.DatasetGenerationError: An error occurred while generating the dataset"
+    ],
+    "warnings": [
+      "datasets.packaged_modules.json.json: Failed to load JSON from file '/home/claude/paper/results/e4/bad.jsonl' with error <class 'pyarrow.lib.ArrowInvalid'>: JSON parse error: Invalid encoding in string. in row 10"
+    ],
+    "stderr_warn_lines": []
+  },
+  "sft_truncation_long_context": {
+    "exception": "ValueError: Column 'assistant_masks' doesn't exist.",
+    "stage": "preprocess_truncated",
+    "traceback_tail": [
+      "  File \"/home/claude/paper/.venv/lib/python3.13/site-packages/datasets/arrow_dataset.py\", line 663, in __init__",
+      "    raise ValueError(f\"Column '{column_name}' doesn't exist.\")",
+      "ValueError: Column 'assistant_masks' doesn't exist."
+    ],
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Truncating train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]",
+      "Truncating train dataset: 100%|##########| 16/16 [00:00<00:00, 1964.89 examples/s]"
+    ]
+  },
+  "dpo_identical_pairs": {
+    "exception": null,
+    "stage": "completed",
+    "loss": 0.6931471824645996,
+    "grad_norm": 1.8747506658201019e-07,
+    "param_change_l2": 0.012991596158118223,
+    "ln2": 0.6931471805599453,
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Dropping fully truncated examples from train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]",
+      "Dropping fully truncated examples from train dataset: 100%|##########| 16/16 [00:00<00:00, 7524.26 examples/s]"
+    ]
+  },
+  "dpo_normal_pairs": {
+    "exception": null,
+    "stage": "completed",
+    "loss": 0.6931471824645996,
+    "grad_norm": 4.61978816986084,
+    "param_change_l2": 0.49386762458625805,
+    "ln2": 0.6931471805599453,
+    "warnings": [],
+    "stderr_warn_lines": [
+      "Dropping fully truncated examples from train dataset:   0%|          | 0/16 [00:00<?, ? examples/s]",
+      "Dropping fully truncated examples from train dataset: 100%|##########| 16/16 [00:00<00:00, 7080.49 examples/s]"
+    ]
+  }
+}

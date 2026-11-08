@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: article
+title: "A Parallel Paradigm: The Coming Economics of Model Ownership"
+authors:
+  - family-names: Tsenang
+    given-names: Thatayotlhe
+    orcid: "https://orcid.org/0009-0003-1396-1732"
+    affiliation: "Independent researcher, Gaborone, Botswana"
+date-released: 2026-11-09
+version: "1.0"
+url: "https://github.com/Thatayotlhe04/a-parallel-paradigm"
+abstract: >-
+  Asks whether organizations will increasingly own and adapt their AI models rather than
+  rent them through APIs, using public prices and surveys, a dynamic break-even model with
+  Monte Carlo uncertainty, and three experiments on training-data quality.

@@ -1,0 +1,19 @@
+\textbf{The question.} Will organizations increasingly own and adapt their AI models rather than rent them through APIs? This essay answers from public prices and surveys, a cost model, and three experiments.
+
+\textbf{The answer.} Yes, but not in the way the question suggests. \lbl{Observed} In one survey, the share of AI builders who post-train rose from 6\% to 10\% in a year, while closed models still take about 96\% of enterprise spend. Organizations are adding an owned layer of narrow, adapted models beneath a rented frontier, not replacing the frontier.
+
+\textbf{The economics.} \lbl{Calculated} For one narrow task moved from a frontier API to a fine-tuned open 8B model, owning becomes more likely than not to be cheaper at a monthly API bill of about \$22,000, or about \$37,000 at US labor rates. Holding API prices flat would put that point about seven times lower: the falling price of rented capability is the variable a static analysis leaves out. Lifetime savings from a price advantage are capped at roughly half a year of the bill they replace. Labor, not compute, sets the threshold. Cutting labor tenfold and sharing GPUs across owners would bring it to about \$1,100 a month. The cost of errors and the rights renting cannot buy, such as availability, a stable model and data residency, can override all of this. No major API offers in-country processing in southern Africa.
+
+\textbf{The data.} \lbl{Observed} Bad data costs money mainly through silent harm, not crashed runs.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{E1.} A deterministic validator, Parallelogram, which I develop, flagged 98\% to 100\% of injected rows for 18 of 23 defect types. None of the five tools tested caught swapped answers, cut-off answers or flipped preferences.
+\item
+  \textbf{E4.} At default settings, TRL 1.17.1 trains silently on missing answers, unknown roles and empty answers, and truncates over-length rows without a warning.
+\item
+  \textbf{E2.} On a small model, systematic label errors cost up to 32 points of accuracy. Random errors mostly vanished under greedy decoding and reappeared once the model sampled. Empty answers cost up to 22 points.
+\end{itemize}
+
+\textbf{What is new here.} An ownership ladder that separates portable adapters from hosted fine-tunes; a dynamic break-even model with Monte Carlo uncertainty and a cap on lifetime savings; a map of the channels through which data defects cost money; and experiments whose code, seeds and data hashes are in Appendix B. Two things are not shown: how large these effects are on production-scale models, and how fast a fine-tuned model's advantage decays as base models improve. Appendix B gives protocols for both.

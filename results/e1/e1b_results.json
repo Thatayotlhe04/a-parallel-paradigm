@@ -1,0 +1,102 @@
+{
+  "fix_fate": {
+    "invalid_json": {
+      "dropped": 10
+    },
+    "other_nondup": {
+      "kept": 40,
+      "dropped": 20
+    },
+    "pii_email": {
+      "repaired": 10
+    },
+    "whitespace_response": {
+      "repaired": 10
+    },
+    "secret_github": {
+      "repaired": 10
+    },
+    "empty_response": {
+      "dropped": 1,
+      "repaired": 9
+    },
+    "whitespace_duplicate": {
+      "kept_unchanged": 5,
+      "dropped": 5
+    },
+    "overlong_user": {
+      "repaired": 10
+    },
+    "role_order": {
+      "repaired": 10
+    },
+    "mojibake": {
+      "repaired": 10
+    },
+    "missing_assistant": {
+      "repaired": 10
+    },
+    "secret_aws": {
+      "repaired": 10
+    },
+    "other_exact_dup": {
+      "kept": 10,
+      "dropped": 0,
+      "copies_in_output": 10
+    },
+    "overlong_response": {
+      "repaired": 10
+    }
+  },
+  "minhash_tradeoff": [
+    {
+      "threshold": 0.9,
+      "clean_base_flags": 0,
+      "near_dup_copy_flagged": 0.02,
+      "flags_in_file": 3,
+      "approx_pair_recall": 0.03
+    },
+    {
+      "threshold": 0.8,
+      "clean_base_flags": 0,
+      "near_dup_copy_flagged": 0.09,
+      "flags_in_file": 16,
+      "approx_pair_recall": 0.16
+    },
+    {
+      "threshold": 0.7,
+      "clean_base_flags": 2,
+      "near_dup_copy_flagged": 0.24,
+      "flags_in_file": 54,
+      "approx_pair_recall": 0.52
+    },
+    {
+      "threshold": 0.6,
+      "clean_base_flags": 2,
+      "near_dup_copy_flagged": 0.28,
+      "flags_in_file": 70,
+      "approx_pair_recall": 0.68
+    },
+    {
+      "threshold": 0.5,
+      "clean_base_flags": 7,
+      "near_dup_copy_flagged": 0.36,
+      "flags_in_file": 93,
+      "approx_pair_recall": 0.86
+    },
+    {
+      "threshold": 0.4,
+      "clean_base_flags": 12,
+      "near_dup_copy_flagged": 0.42,
+      "flags_in_file": 107,
+      "approx_pair_recall": 0.95
+    },
+    {
+      "threshold": 0.3,
+      "clean_base_flags": 33,
+      "near_dup_copy_flagged": 0.44,
+      "flags_in_file": 130,
+      "approx_pair_recall": 0.97
+    }
+  ]
+}

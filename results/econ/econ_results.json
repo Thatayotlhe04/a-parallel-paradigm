@@ -1,0 +1,221 @@
+{
+  "inputs": {
+    "per_task_sonnet": 0.005,
+    "per_task_haiku": 0.00025,
+    "per_task_open8b_hosted": 3.8e-05,
+    "tasks_per_gpu_hour_median": 55731.13043478261,
+    "gpu_cost_per_task_at_median": 0.00014354634362498205,
+    "us_ml_rate_per_hour": 120.79326923076923
+  },
+  "even_odds_point_usd_per_month": {
+    "labor uncertain $20-$121/hr": 22402,
+    "US labor $121/hr": 36873,
+    "lower-cost labor $25/hr": 16863,
+    "pooled adapter serving (level 3)": 10383,
+    "static prices (counterfactual)": 5136,
+    "static prices, growth kept": 3027,
+    "mature capability only, 4.7x/yr": 16874,
+    "renter pays to switch models": 21657,
+    "labor hours / 10": 12756,
+    "labor hours / 10 + pooled serving": 1065
+  },
+  "labor_uncertain_median_rate": 49.1514535351233,
+  "breakeven_median_params_usd_per_month": 36544.80407299138,
+  "breakeven_static_prices_usd_per_month": 8322.17388666411,
+  "tornado": [
+    {
+      "parameter": "labor rate ($25 to $121 per hour)",
+      "breakeven_low_setting": 17099.525289539608,
+      "breakeven_high_setting": 36544.80407299138,
+      "base": 36544.80407299138
+    },
+    {
+      "parameter": "API price decline at fixed capability (4.7x to 13x per year)",
+      "breakeven_low_setting": 27255.127130634955,
+      "breakeven_high_setting": 45705.723921074634,
+      "base": 36544.80407299138
+    },
+    {
+      "parameter": "maintenance (10 to 40 hours per month)",
+      "breakeven_low_setting": 28588.289794104992,
+      "breakeven_high_setting": 44501.318351877766,
+      "base": 36544.80407299138
+    },
+    {
+      "parameter": "workload growth (0% to 100% per year)",
+      "breakeven_low_setting": 42814.353861061034,
+      "breakeven_high_setting": 30209.408211246908,
+      "base": 36544.80407299138
+    },
+    {
+      "parameter": "GPU price ($2.00 to $5.49 per hour)",
+      "breakeven_low_setting": 30951.001383650986,
+      "breakeven_high_setting": 42138.60676233178,
+      "base": 36544.80407299138
+    },
+    {
+      "parameter": "initial engineering (1 to 3 engineer-months)",
+      "breakeven_low_setting": 32360.35526173974,
+      "breakeven_high_setting": 43792.48201575038,
+      "base": 36544.80407299138
+    },
+    {
+      "parameter": "months between re-bases (12 to 4)",
+      "breakeven_low_setting": 33987.52345378602,
+      "breakeven_high_setting": 41914.64248155945,
+      "base": 36544.80407299138
+    },
+    {
+      "parameter": "re-adaptation cost (15% to 50% of initial labor)",
+      "breakeven_low_setting": 33748.145676047076,
+      "breakeven_high_setting": 39341.46246993568,
+      "base": 36544.80407299138
+    },
+    {
+      "parameter": "utilization of provisioned GPUs (60% to 15%)",
+      "breakeven_low_setting": 36544.80407299138,
+      "breakeven_high_setting": 37638.11398390089,
+      "base": 36544.80407299138
+    },
+    {
+      "parameter": "achieved vs benchmark throughput (70% to 25%)",
+      "breakeven_low_setting": 36544.80407299138,
+      "breakeven_high_setting": 36647.90036162207,
+      "base": 36544.80407299138
+    },
+    {
+      "parameter": "share of price decline owners capture (100% to 30%)",
+      "breakeven_low_setting": 36544.80407299138,
+      "breakeven_high_setting": 36544.80407299138,
+      "base": 36544.80407299138
+    }
+  ],
+  "half_life": [
+    {
+      "price_decline": "mature capability, 4.7x/yr",
+      "initial_cost_advantage": 3,
+      "years_until_gone": 0.96
+    },
+    {
+      "price_decline": "mature capability, 4.7x/yr",
+      "initial_cost_advantage": 10,
+      "years_until_gone": 2.0
+    },
+    {
+      "price_decline": "mature capability, 4.7x/yr",
+      "initial_cost_advantage": 30,
+      "years_until_gone": 2.96
+    },
+    {
+      "price_decline": "mature capability, 4.7x/yr",
+      "initial_cost_advantage": "cap",
+      "years_until_gone": null,
+      "savings_cap_months_of_todays_bill": 7.8
+    },
+    {
+      "price_decline": "average, 13x/yr",
+      "initial_cost_advantage": 3,
+      "years_until_gone": 0.51
+    },
+    {
+      "price_decline": "average, 13x/yr",
+      "initial_cost_advantage": 10,
+      "years_until_gone": 1.06
+    },
+    {
+      "price_decline": "average, 13x/yr",
+      "initial_cost_advantage": 30,
+      "years_until_gone": 1.57
+    },
+    {
+      "price_decline": "average, 13x/yr",
+      "initial_cost_advantage": "cap",
+      "years_until_gone": null,
+      "savings_cap_months_of_todays_bill": 4.7
+    },
+    {
+      "price_decline": "just-debuted, 75x/yr",
+      "initial_cost_advantage": 3,
+      "years_until_gone": 0.28
+    },
+    {
+      "price_decline": "just-debuted, 75x/yr",
+      "initial_cost_advantage": 10,
+      "years_until_gone": 0.59
+    },
+    {
+      "price_decline": "just-debuted, 75x/yr",
+      "initial_cost_advantage": 30,
+      "years_until_gone": 0.87
+    },
+    {
+      "price_decline": "just-debuted, 75x/yr",
+      "initial_cost_advantage": "cap",
+      "years_until_gone": null,
+      "savings_cap_months_of_todays_bill": 2.8
+    }
+  ],
+  "personas": [
+    {
+      "persona": "Individual developer",
+      "tasks_per_month": 50000,
+      "comparator": "Haiku 5.5",
+      "monthly_api_bill": 12.5,
+      "rent_36mo_discounted": 89,
+      "own_36mo_discounted": 259915,
+      "own_over_rent": 2923.58
+    },
+    {
+      "persona": "Individual developer (frontier quality)",
+      "tasks_per_month": 50000,
+      "comparator": "Sonnet 5.5",
+      "monthly_api_bill": 250.0,
+      "rent_36mo_discounted": 1778,
+      "own_36mo_discounted": 259915,
+      "own_over_rent": 146.18
+    },
+    {
+      "persona": "Small software company",
+      "tasks_per_month": 2000000,
+      "comparator": "Sonnet 5.5",
+      "monthly_api_bill": 10000.0,
+      "rent_36mo_discounted": 71122,
+      "own_36mo_discounted": 259915,
+      "own_over_rent": 3.65
+    },
+    {
+      "persona": "Medium-sized business",
+      "tasks_per_month": 20000000,
+      "comparator": "Sonnet 5.5",
+      "monthly_api_bill": 100000.0,
+      "rent_36mo_discounted": 711222,
+      "own_36mo_discounted": 269512,
+      "own_over_rent": 0.38
+    },
+    {
+      "persona": "Large enterprise (one task)",
+      "tasks_per_month": 200000000,
+      "comparator": "Sonnet 5.5",
+      "monthly_api_bill": 1000000.0,
+      "rent_36mo_discounted": 7112220,
+      "own_36mo_discounted": 747383,
+      "own_over_rent": 0.11
+    },
+    {
+      "persona": "Small company that only needs small-model quality",
+      "tasks_per_month": 2000000,
+      "comparator": "Haiku 5.5",
+      "monthly_api_bill": 500.0,
+      "rent_36mo_discounted": 3556,
+      "own_36mo_discounted": 259915,
+      "own_over_rent": 73.09
+    }
+  ],
+  "worked_example_4_2": {
+    "own_monthly_discounted_avg": 7219.861111111111,
+    "own_monthly_undiscounted_avg": 8164.694242636948,
+    "haiku_monthly_bill": 500.0,
+    "error_cost_threshold_discounted": 0.06719861111111111,
+    "error_cost_threshold_undiscounted": 0.07664694242636948
+  }
+}

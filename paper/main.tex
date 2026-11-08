@@ -1,0 +1,127 @@
+% A Parallel Paradigm: The Coming Economics of Model Ownership
+% Thatayotlhe Tsenang, November 2026
+%
+% Build:  latexmk -pdf main.tex
+% body.tex, summary.tex and refs.bib are generated from the essay's source
+% text by latex/build_tex.py; figures by code/make_figures.py.
+
+\documentclass[11pt,a4paper]{article}
+
+% ---- fonts and text ---------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[sc]{mathpazo}
+\renewcommand{\ttdefault}{lmtt}
+\linespread{1.07}
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,left=1.05in,right=1.05in,top=1.05in,bottom=1.15in,headsep=0.3in]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\definecolor{ink}{gray}{0.08}
+\definecolor{muted}{gray}{0.38}
+\definecolor{rule}{gray}{0.72}
+
+% ---- structure ---------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{booktabs,longtable,array,calc}
+\usepackage{seqsplit}
+\usepackage[shortlabels]{enumitem}
+\setlist{itemsep=2pt,topsep=4pt,leftmargin=1.4em}
+\usepackage{etoolbox}
+\usepackage[font=small,labelfont=bf,labelsep=period,justification=raggedright,
+            singlelinecheck=false,skip=6pt]{caption}
+\setlength{\LTcapwidth}{\textwidth}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\Large}{\thesection}{0.9em}{}
+\titleformat{\subsection}{\normalfont\large\itshape}{\thesubsection}{0.8em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{0.7em}{}
+\titlespacing*{\section}{0pt}{2.4ex plus 1ex minus .2ex}{1.1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{2ex plus 1ex minus .2ex}{0.8ex plus .2ex}
+\setcounter{tocdepth}{1}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{muted}\textsc{a parallel paradigm}}
+\fancyhead[R]{\small\color{muted}\thepage}
+\renewcommand{\headrule}{{\color{rule}\hrule height 0.4pt}}
+\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrule}{}\fancyfoot[C]{\small\color{muted}\thepage}}
+
+% ---- references and links ------------------------------------------------------
+\usepackage[round,authoryear]{natbib}
+\setlength{\bibsep}{3pt plus 1pt}
+\renewcommand{\bibfont}{\small}
+\renewcommand{\bibpreamble}{\noindent All pages were accessed on 8 and 9 November 2026. Prices and product facts change often; check the live page before relying on a figure.\par\medskip}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=ink,citecolor=muted,urlcolor=muted,
+            pdftitle={A Parallel Paradigm: The Coming Economics of Model Ownership},
+            pdfauthor={Thatayotlhe Tsenang}]{hyperref}
+\usepackage{orcidlink}
+\usepackage{multicol}
+
+% ---- pandoc and paper macros ------------------------------------------------------
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% epistemic labels: [observed], [calculated], [hypothesis], [speculation]
+\newcommand{\lbl}[1]{\textnormal{\textsc{[\MakeLowercase{#1}]}}}
+\AtBeginEnvironment{quote}{\itshape}
+\renewcommand{\arraystretch}{1.12}
+
+\begin{document}
+\thispagestyle{plain}
+
+\begin{center}
+  {\fontsize{24}{28}\selectfont A Parallel Paradigm}\\[6pt]
+  {\Large\itshape The Coming Economics of Model Ownership}\\[18pt]
+  {\large Thatayotlhe Tsenang\,\orcidlink{0009-0003-1396-1732}}\\[3pt]
+  {\small\color{muted}Independent researcher, Gaborone, Botswana\quad
+   \href{mailto:tsenangthatayotlhe04@gmail.com}{tsenangthatayotlhe04@gmail.com}}\\[3pt]
+  {\small\color{muted}Preprint, November 2026}
+\end{center}
+
+\vspace{8pt}
+\begin{abstract}
+\noindent Most AI products in 2026 rent intelligence through APIs. This paper asks whether
+organizations will increasingly own and adapt their models instead, and answers from public
+prices and surveys, a cost model and three experiments. Ownership is growing, but as an owned
+layer of narrow, adapted models beneath a rented frontier rather than as a replacement for it.
+A dynamic break-even model with Monte Carlo uncertainty finds that, for one narrow task moved
+from a frontier API to a fine-tuned open 8B model, owning becomes more likely than not to be
+cheaper at a monthly API bill of about \$22,000, or about \$37,000 at US labor rates. Ignoring
+the falling price of rented capability puts that point about seven times too low, and lifetime
+savings from a price advantage are capped at roughly half a year of the bill replaced. Labor,
+not compute, sets the threshold. Three experiments on training data show that defects cost
+money mainly through silent harm. Deterministic validators catch structural defects but not
+semantic ones; a widely used training library trains silently on most structural defects at
+its default settings; and on a small model, systematic label errors cost up to 32 points of
+accuracy. Code, data hashes and seeds are released at
+\url{https://github.com/Thatayotlhe04/a-parallel-paradigm}.
+\end{abstract}
+
+\vspace{4pt}
+\begingroup
+\small
+\setlength{\columnsep}{2.2em}
+\noindent{\normalsize\bfseries Contents}\vspace{-0.6em}
+\begin{multicols}{2}
+\makeatletter\@starttoc{toc}\makeatother
+\end{multicols}
+\endgroup
+
+\vspace{6pt}
+\noindent{\small\color{muted}\textit{Disclosure.} The author develops Parallelogram, an
+open-source linter for fine-tuning data that is evaluated in sections~\ref{sec:data},
+\ref{sec:experiments} and~\ref{sec:synthesis}. Section~\ref{sec:question} sets out how that interest was handled.}
+
+\newpage
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+\input{summary}
+
+\input{body}
+
+\nocite{alpacacleaned,hhrlhf,parallelogram,trl}
+\phantomsection\addcontentsline{toc}{section}{References}
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

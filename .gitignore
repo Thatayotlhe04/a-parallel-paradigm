@@ -1,0 +1,19 @@
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.toc
+paper/main.pdf
+# regenerated experiment working files (large)
+results/e1/e1_files/
+results/e4/model/
+results/e4/run/
+results/e4/runb/
+results/e4/tok/
+data/
+.venv/
+__pycache__/
