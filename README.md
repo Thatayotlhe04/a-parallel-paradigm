@@ -1,28 +1,23 @@
 # A Parallel Paradigm: The Coming Economics of Model Ownership
 
-Thatayotlhe Tsenang · Independent researcher, Gaborone, Botswana · November 2026
+Thatayotlhe Tsenang · Gaborone, Botswana · November 2026
 
 **Paper:** [`paper/a-parallel-paradigm.pdf`](paper/a-parallel-paradigm.pdf)
 
-Most AI products in 2026 rent intelligence through APIs. This paper asks whether organizations
+Most AI products in 2026 rent intelligence through APIs. This essay asks whether organizations
 will increasingly own and adapt their models instead, and answers from public prices and surveys,
 a cost model and three experiments. Ownership is growing, but as an owned layer of narrow, adapted
 models beneath a rented frontier rather than as a replacement for it. For one narrow task moved
-from a frontier API to a fine-tuned open 8B model, owning becomes more likely than not to be
-cheaper at a monthly API bill of about $22,000, or about $37,000 at US labor rates. Ignoring the
-falling price of rented capability puts that point about seven times too low. Labor, not compute,
+from a frontier API to a fine-tuned open 8B model, a dynamic break-even simulation finds owning
+cheaper in half of its draws at a monthly API bill of about $22,000, or about $37,000 at US labor
+rates. That even-odds point is a property of the simulation's assumed input ranges, not the odds
+facing any particular organization. Ignoring the falling price of rented capability puts it about
+seven times too low. Labor, not compute,
 sets the threshold. The experiments show that training-data defects cost money mainly through
 silent harm rather than crashed runs.
 
-This repository holds the paper's LaTeX source, every script behind its original numbers, the
+This repository holds the essay's LaTeX source, every script behind its original numbers, the
 raw outputs, and the research notes with source URLs.
-
-## Disclosure
-
-The author develops [Parallelogram](https://github.com/Thatayotlhe04/Parallelogram), an
-open-source linter for fine-tuning data that is one of the tools evaluated in sections 5, 6
-and 9. The experiments include defect types it was never designed to catch, and its failures are
-reported alongside its successes.
 
 ## Layout
 
@@ -113,4 +108,4 @@ make body       # regenerate body.tex, summary.tex and refs.bib from paper/build
 
 ## Licence
 
-No licence has been chosen yet. Until one is added, all rights are reserved by the author.
+MIT. See [`LICENSE`](LICENSE).

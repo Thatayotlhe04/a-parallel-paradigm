@@ -56,7 +56,6 @@
 \usepackage[colorlinks=true,linkcolor=ink,citecolor=muted,urlcolor=muted,
             pdftitle={A Parallel Paradigm: The Coming Economics of Model Ownership},
             pdfauthor={Thatayotlhe Tsenang}]{hyperref}
-\usepackage{orcidlink}
 \usepackage{multicol}
 
 % ---- pandoc and paper macros ------------------------------------------------------
@@ -72,22 +71,23 @@
 \begin{center}
   {\fontsize{24}{28}\selectfont A Parallel Paradigm}\\[6pt]
   {\Large\itshape The Coming Economics of Model Ownership}\\[18pt]
-  {\large Thatayotlhe Tsenang\,\orcidlink{0009-0003-1396-1732}}\\[3pt]
-  {\small\color{muted}Independent researcher, Gaborone, Botswana\quad
+  {\large Thatayotlhe Tsenang}\\[3pt]
+  {\small\color{muted}Gaborone, Botswana\quad
    \href{mailto:tsenangthatayotlhe04@gmail.com}{tsenangthatayotlhe04@gmail.com}}\\[3pt]
-  {\small\color{muted}Preprint, November 2026}
+  {\small\color{muted}November 2026}
 \end{center}
 
 \vspace{8pt}
 \begin{abstract}
-\noindent Most AI products in 2026 rent intelligence through APIs. This paper asks whether
+\noindent Most AI products in 2026 rent intelligence through APIs. This essay asks whether
 organizations will increasingly own and adapt their models instead, and answers from public
 prices and surveys, a cost model and three experiments. Ownership is growing, but as an owned
 layer of narrow, adapted models beneath a rented frontier rather than as a replacement for it.
-A dynamic break-even model with Monte Carlo uncertainty finds that, for one narrow task moved
-from a frontier API to a fine-tuned open 8B model, owning becomes more likely than not to be
-cheaper at a monthly API bill of about \$22,000, or about \$37,000 at US labor rates. Ignoring
-the falling price of rented capability puts that point about seven times too low, and lifetime
+For one narrow task moved from a frontier API to a fine-tuned open 8B model, a dynamic
+break-even simulation finds owning cheaper in half of its draws at a monthly API bill of about
+\$22,000, or about \$37,000 at US labor rates. That even-odds point is a property of the
+simulation's assumed input ranges, not the odds facing any particular organization. Ignoring the
+falling price of rented capability puts it about seven times too low, and lifetime
 savings from a price advantage are capped at roughly half a year of the bill replaced. Labor,
 not compute, sets the threshold. Three experiments on training data show that defects cost
 money mainly through silent harm. Deterministic validators catch structural defects but not
@@ -106,11 +106,6 @@ accuracy. Code, data hashes and seeds are released at
 \makeatletter\@starttoc{toc}\makeatother
 \end{multicols}
 \endgroup
-
-\vspace{6pt}
-\noindent{\small\color{muted}\textit{Disclosure.} The author develops Parallelogram, an
-open-source linter for fine-tuning data that is evaluated in sections~\ref{sec:data},
-\ref{sec:experiments} and~\ref{sec:synthesis}. Section~\ref{sec:question} sets out how that interest was handled.}
 
 \newpage
 \section*{Summary}

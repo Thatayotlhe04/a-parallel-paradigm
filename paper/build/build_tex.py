@@ -49,9 +49,11 @@ body = re.sub(r"```latex\n(.*?)```", eq, body, flags=re.S)
 # ---- figures -----------------------------------------------------------------
 FIGS = {
     "Figure 1": ("fig1_ownership_curves", "fig:curves",
-                 "Probability that owning a fine-tuned open 8B model is cheaper than renting "
-                 "Claude Sonnet 5.5 over 36 months, by today's monthly API bill for one narrow task. "
-                 "20,000 draws per bill level; even-odds points interpolated on a log scale. "
+                 "Share of simulated draws in which owning a fine-tuned open 8B model is cheaper than "
+                 "renting Claude Sonnet 5.5 over 36 months, by today's monthly API bill for one narrow task. "
+                 "The shares describe the model's assumed input ranges (section~\\ref{sec:math}), not the "
+                 "odds facing any particular organization. 20,000 draws per bill level; even-odds points "
+                 "interpolated on a log scale. "
                  "Source: \\texttt{results/econ/montecarlo\\_curves.csv}."),
     "Figure 2": ("fig2_sensitivity", "fig:tornado",
                  "Sensitivity of the break-even bill to one input at a time, at US labor rates with "
@@ -112,10 +114,6 @@ PRE = [
     ("| V |", "| " + M("V") + " |"), ("| g |", "| " + M("g") + " |"), ("| h |", "| " + M("h") + " |"),
     ("| u |", "| " + M("u") + " |"),
     ("at utilization u.", "at utilization " + M("u") + "."),
-    ("Every original number in this essay comes from a script in the accompanying bundle, `a-parallel-paradigm-repro.zip`, which also holds the raw outputs.",
-     "Every original number in this essay comes from a script in the accompanying repository, "
-     + raw(r"\url{https://github.com/Thatayotlhe04/a-parallel-paradigm}") +
-     ", which also holds the raw outputs and the source of this document."),
     ("| `e2_real_model.py` |",
      "| `make_figures.py` | Figures 1 to 3 from the result files | none | `paper/figures/` |\n| `e2_real_model.py` |"),
 ]

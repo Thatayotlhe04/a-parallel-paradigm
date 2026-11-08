@@ -36,10 +36,6 @@ Prices, market shares and product facts are as of 8 November 2026 and will age q
 
 Four pieces are, as far as I can tell, original. The \textbf{ownership ladder} separates the rights an organization can hold, so ``ownership is rising'' becomes measurable. A \textbf{dynamic, labor-inclusive break-even model} shows how falling API prices move the point at which owning pays. A \textbf{harm-channel model} of training-data defects separates defects that waste compute from those that damage models or corrupt evaluation. And three \textbf{reproducible experiments} measure detection, framework behavior and harm under controlled defect injection.
 
-\subsection{Disclosure}
-
-I develop Parallelogram, an open-source linter for fine-tuning data that appears in sections 5, 6 and 9 as one case study. I have tried to evaluate it the way I would evaluate a competitor's tool. The experiments include defect types it was never designed to catch, and its failures are reported alongside its successes. Readers should still weigh my conclusions about it with that interest in mind. Nothing else in the essay depends on it.
-
 \section{The current economics of intelligence}
 
 In late 2026, organizations buy AI in three ways. They call a proprietary API, call an open-weight model hosted per token by a third party, or serve a model on GPUs they rent or own. The first channel takes almost all the money. The second carries a large but volatile share of the work. The third is rarer than the discourse suggests.
@@ -361,10 +357,10 @@ Costs are discounted at 10\% a year. The decline range spans mature capability (
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/fig1_ownership_curves.pdf}
-\caption{Probability that owning a fine-tuned open 8B model is cheaper than renting Claude Sonnet 5.5 over 36 months, by today's monthly API bill for one narrow task. 20,000 draws per bill level; even-odds points interpolated on a log scale. Source: \texttt{results/econ/montecarlo\_curves.csv}.}\label{fig:curves}
+\caption{Share of simulated draws in which owning a fine-tuned open 8B model is cheaper than renting Claude Sonnet 5.5 over 36 months, by today's monthly API bill for one narrow task. The shares describe the model's assumed input ranges (section~\ref{sec:math}), not the odds facing any particular organization. 20,000 draws per bill level; even-odds points interpolated on a log scale. Source: \texttt{results/econ/montecarlo\_curves.csv}.}\label{fig:curves}
 \end{figure}
 
-\lbl{Calculated} With prices and volume both held flat, owning becomes more likely than not to be cheaper at about \$5,100 a month. With falling prices and growing volume, the even-odds point is about \$22,000.
+\lbl{Calculated} With prices and volume both held flat, owning is cheaper in half the draws at about \$5,100 a month. With falling prices and growing volume, the even-odds point is about \$22,000.
 
 Price decline is the variable a static analysis misses. Holding prices flat while keeping growth puts the point at about \$3,000, a 7.4-fold difference. Fixing the decline at the mature-capability rate of 4.7-fold lowers it to about \$17,000.
 
@@ -850,7 +846,7 @@ With 30\% of the test set leaked, the reported accuracy was five times the true 
 \item
   \textbf{Injection realism.} Injected defects are cleaner than natural ones. Natural near-duplicates and paraphrases are more varied, so the MinHash and n-gram recall figures are optimistic. The injected credentials use the canonical AWS and GitHub key formats that pattern rules look for, so the secrets recall is optimistic too.
 \item
-  \textbf{Author's tool.} I develop Parallelogram. The defect list deliberately includes types it cannot catch, and every number above comes from scripts in Appendix B that anyone can rerun.
+  \textbf{Tool selection.} The defect list deliberately includes types that no structural tool, Parallelogram included, can catch, and every number above comes from scripts in Appendix B that anyone can rerun.
 \end{itemize}
 
 \section{Who should own what}
@@ -1053,7 +1049,7 @@ Access suspensions of rented models & One, in 2026: 19 days; Fable 5 returned wi
 \item
   \textbf{Rented intelligence keeps the money.} \lbl{Observed} Closed models take about 96\% of enterprise spend while carrying about 81\% of tokens. Capability, not price, decides purchases, and the frontier remains rented.
 \item
-  \textbf{Ownership on price alone is rare.} \lbl{Calculated} For one narrow task, owning a fine-tuned model becomes more likely than not to be cheaper only once the monthly API bill reaches about \$22,000 in my model, and about \$37,000 at US labor rates. Holding API prices flat in the same model puts that point about seven times lower, which is why a static analysis overstates the case for owning.
+  \textbf{Ownership on price alone is rare.} \lbl{Calculated} For one narrow task, owning a fine-tuned model comes out cheaper in half the simulated draws only once the monthly API bill reaches about \$22,000, and about \$37,000 at US labor rates. That even-odds point holds for the model's assumed input ranges, not for any particular organization. Holding API prices flat in the same model puts it about seven times lower, which is why a static analysis overstates the case for owning.
 \item
   \textbf{A cost advantage is perishable.} \lbl{Calculated} At observed price declines, a tenfold cost advantage lasts one to two years. Lifetime savings are capped at 4.7 to 7.8 months of today's API bill for that workload with flat volume, and 5.4 to 10 months with median growth. Both figures assume a renter who moves to cheaper models for free.
 \item
@@ -1161,7 +1157,7 @@ $\delta$ & Discount rate & 10\% per year \\
 
 \section{Reproducibility and open questions}
 
-Every original number in this essay comes from a script in the accompanying repository, \url{https://github.com/Thatayotlhe04/a-parallel-paradigm}, which also holds the raw outputs and the source of this document.
+Every original number in this essay comes from a script in the accompanying repository, \href{https://github.com/Thatayotlhe04/a-parallel-paradigm}{\texttt{github.com/Thatayotlhe04/a-parallel-paradigm}}, which also holds the raw outputs and the typeset LaTeX version of this essay.
 
 \subsection{Environment}
 

@@ -8,11 +8,11 @@ Nov 8, 2026 · @Thatayotlhe Tsenang
 
 **The answer.** Yes, but not in the way the question suggests. **\[Observed\]** In one survey, the share of AI builders who post-train rose from 6% to 10% in a year, while closed models still take about 96% of enterprise spend. Organizations are adding an owned layer of narrow, adapted models beneath a rented frontier, not replacing the frontier.
 
-**The economics.** **\[Calculated\]** For one narrow task moved from a frontier API to a fine-tuned open 8B model, owning becomes more likely than not to be cheaper at a monthly API bill of about $22,000, or about $37,000 at US labor rates. Holding API prices flat would put that point about seven times lower: the falling price of rented capability is the variable a static analysis leaves out. Lifetime savings from a price advantage are capped at roughly half a year of the bill they replace. Labor, not compute, sets the threshold. Cutting labor tenfold and sharing GPUs across owners would bring it to about $1,100 a month. The cost of errors and the rights renting cannot buy, such as availability, a stable model and data residency, can override all of this. No major API offers in-country processing in southern Africa.
+**The economics.** **\[Calculated\]** For one narrow task moved from a frontier API to a fine-tuned open 8B model, my simulation finds owning cheaper in half of its draws at a monthly API bill of about $22,000, or about $37,000 at US labor rates. That even-odds point describes the model's assumed input ranges, not the odds facing any particular organization. Holding API prices flat would put that point about seven times lower: the falling price of rented capability is the variable a static analysis leaves out. Lifetime savings from a price advantage are capped at roughly half a year of the bill they replace. Labor, not compute, sets the threshold. Cutting labor tenfold and sharing GPUs across owners would bring it to about $1,100 a month. The cost of errors and the rights renting cannot buy, such as availability, a stable model and data residency, can override all of this. No major API offers in-country processing in southern Africa.
 
 **The data.** **\[Observed\]** Bad data costs money mainly through silent harm, not crashed runs.
 
-- **E1.** A deterministic validator, Parallelogram, which I develop, flagged 98% to 100% of injected rows for 18 of 23 defect types. None of the five tools tested caught swapped answers, cut-off answers or flipped preferences.
+- **E1.** A deterministic validator, Parallelogram, flagged 98% to 100% of injected rows for 18 of 23 defect types. None of the five tools tested caught swapped answers, cut-off answers or flipped preferences.
 - **E4.** At default settings, TRL 1.17.1 trains silently on missing answers, unknown roles and empty answers, and truncates over-length rows without a warning.
 - **E2.** On a small model, systematic label errors cost up to 32 points of accuracy. Random errors mostly vanished under greedy decoding and reappeared once the model sampled. Empty answers cost up to 22 points.
 
@@ -46,10 +46,6 @@ Prices, market shares and product facts are as of 8 November 2026 and will age q
 ### What is new here
 
 Four pieces are, as far as I can tell, original. The **ownership ladder** separates the rights an organization can hold, so "ownership is rising" becomes measurable. A **dynamic, labor-inclusive break-even model** shows how falling API prices move the point at which owning pays. A **harm-channel model** of training-data defects separates defects that waste compute from those that damage models or corrupt evaluation. And three **reproducible experiments** measure detection, framework behavior and harm under controlled defect injection.
-
-### Disclosure
-
-I develop Parallelogram, an open-source linter for fine-tuning data that appears in sections 5, 6 and 9 as one case study. I have tried to evaluate it the way I would evaluate a competitor's tool. The experiments include defect types it was never designed to catch, and its failures are reported alongside its successes. Readers should still weigh my conclusions about it with that interest in mind. Nothing else in the essay depends on it.
 
 ## 2. The current economics of intelligence
 
@@ -234,7 +230,7 @@ Costs are discounted at 10% a year. The decline range spans mature capability (4
 
 &#91;embedded content: Figure 1 · model output, results/econ/montecarlo\_curves.csv · 20,000 draws per point; crossings interpolated on a log scale\]
 
-**\[Calculated\]** With prices and volume both held flat, owning becomes more likely than not to be cheaper at about $5,100 a month. With falling prices and growing volume, the even-odds point is about $22,000.
+**\[Calculated\]** With prices and volume both held flat, owning is cheaper in half the draws at about $5,100 a month. With falling prices and growing volume, the even-odds point is about $22,000.
 
 Price decline is the variable a static analysis misses. Holding prices flat while keeping growth puts the point at about $3,000, a 7.4-fold difference. Fixing the decline at the mature-capability rate of 4.7-fold lowers it to about $17,000.
 
@@ -479,7 +475,7 @@ With 30% of the test set leaked, the reported accuracy was five times the true a
 - **Scale.** E2 uses a 383,000-parameter model on a synthetic task, and E4 a tiny local model. They test mechanisms, not magnitudes in production models. The protocol in Appendix B repeats E2 on a 0.5B open model.
 - **Tokenizer.** Without network access, Parallelogram's length checks ran on approximate counts and reported warnings. With a model tokenizer they report errors.
 - **Injection realism.** Injected defects are cleaner than natural ones. Natural near-duplicates and paraphrases are more varied, so the MinHash and n-gram recall figures are optimistic. The injected credentials use the canonical AWS and GitHub key formats that pattern rules look for, so the secrets recall is optimistic too.
-- **Author's tool.** I develop Parallelogram. The defect list deliberately includes types it cannot catch, and every number above comes from scripts in Appendix B that anyone can rerun.
+- **Tool selection.** The defect list deliberately includes types that no structural tool, Parallelogram included, can catch, and every number above comes from scripts in Appendix B that anyone can rerun.
 
 ## 7. Who should own what
 
@@ -580,7 +576,7 @@ This cuts both ways. The same agents make it easier to migrate between rented mo
 ### What the evidence supports
 
 - **Rented intelligence keeps the money.** **\[Observed\]** Closed models take about 96% of enterprise spend while carrying about 81% of tokens. Capability, not price, decides purchases, and the frontier remains rented.
-- **Ownership on price alone is rare.** **\[Calculated\]** For one narrow task, owning a fine-tuned model becomes more likely than not to be cheaper only once the monthly API bill reaches about $22,000 in my model, and about $37,000 at US labor rates. Holding API prices flat in the same model puts that point about seven times lower, which is why a static analysis overstates the case for owning.
+- **Ownership on price alone is rare.** **\[Calculated\]** For one narrow task, owning a fine-tuned model comes out cheaper in half the simulated draws only once the monthly API bill reaches about $22,000, and about $37,000 at US labor rates. That even-odds point holds for the model's assumed input ranges, not for any particular organization. Holding API prices flat in the same model puts it about seven times lower, which is why a static analysis overstates the case for owning.
 - **A cost advantage is perishable.** **\[Calculated\]** At observed price declines, a tenfold cost advantage lasts one to two years. Lifetime savings are capped at 4.7 to 7.8 months of today's API bill for that workload with flat volume, and 5.4 to 10 months with median growth. Both figures assume a renter who moves to cheaper models for free.
 - **Labor sets the threshold, not compute.** **\[Calculated\]** At the break-even point one GPU has spare capacity, and two thirds of the cost of owning is people.
 - **The strongest reasons to own are not about price.** **\[Hypothesis\]** They are availability, retirement schedules, residency law, and errors that cost more than tokens. Residency bites hardest where in-country API processing does not exist, as in southern Africa, the only region I checked.
@@ -647,7 +643,7 @@ The usual question is whether to rent or own a model. A better question is what 
 
 ## Appendix B: Reproducibility and open questions
 
-Every original number in this essay comes from a script in the accompanying bundle, `a-parallel-paradigm-repro.zip`, which also holds the raw outputs.
+Every original number in this essay comes from a script in the accompanying repository, [github.com/Thatayotlhe04/a-parallel-paradigm](https://github.com/Thatayotlhe04/a-parallel-paradigm), which also holds the raw outputs and the typeset LaTeX version of this essay.
 
 ### Environment
 

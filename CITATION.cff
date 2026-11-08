@@ -6,9 +6,9 @@ authors:
   - family-names: Tsenang
     given-names: Thatayotlhe
     orcid: "https://orcid.org/0009-0003-1396-1732"
-    affiliation: "Independent researcher, Gaborone, Botswana"
 date-released: 2026-11-09
 version: "1.0"
+license: MIT
 url: "https://github.com/Thatayotlhe04/a-parallel-paradigm"
 abstract: >-
   Asks whether organizations will increasingly own and adapt their AI models rather than

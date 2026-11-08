@@ -212,6 +212,9 @@ R = {
     "https://github.com/Thatayotlhe04/Parallelogram":
         ("parallelogram", "misc", dict(author="Tsenang, T.", year="2026",
          title="Parallelogram: a linter for fine-tuning data", howpublished="GitHub repository, version 1.6.1")),
+    "https://github.com/Thatayotlhe04/a-parallel-paradigm":
+        ("thisrepo", "misc", dict(author="Tsenang, T.", year="2026",
+         title="A Parallel Paradigm: code, data and source", howpublished="GitHub repository")),
     "https://github.com/huggingface/trl":
         ("trl", "misc", dict(author="von Werra, L. and others", year="2020",
          title="{TRL}: Transformer Reinforcement Learning", howpublished="GitHub repository, version 1.17.1")),
