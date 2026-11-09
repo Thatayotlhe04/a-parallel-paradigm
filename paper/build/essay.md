@@ -510,7 +510,7 @@ None of these risks shows up in a per-token price. Each is a reason to own at le
 
 ### 7.3 Organizations with sensitive data: a view from Botswana
 
-Data-protection law can settle the question before economics is consulted. Botswana's Data Protection Act of 2024 prohibits transfers of personal data abroad unless the destination is designated by ministerial order. Otherwise the Information and Data Protection Commissioner must authorize the transfer, or a derogation such as the data subject's consent must apply. According to DLA Piper's summary, the designated list has about 45 entries, including South Africa, Kenya, the EU states and the UK, but not the United States ([DLA Piper](https://www.dlapiperdataprotection.com/?c=BW&c2=GB&t=law)).
+Botswana's Data Protection Act of 2024 regulates international transfers of personal data under Sections 74–78. Transfers may proceed through adequacy decisions and ministerial designations, appropriate safeguards, approved binding corporate rules, or specified statutory exceptions. The Act also requires a copy of transferred personal data to remain in Botswana during processing. These requirements introduce legal and operational considerations for organizations using foreign-hosted AI services, potentially strengthening the case for local or regionally compliant AI infrastructure (Data Protection Act, 2024, Part XIV).
 
 The major APIs do not offer processing in southern Africa. OpenAI's regional data processing covers the US, Europe and the UAE ([OpenAI](https://developers.openai.com/api/docs/guides/your-data)). Anthropic offers global or US-only processing, the latter at 1.1 times the standard price ([Anthropic](https://platform.claude.com/docs/en/build-with-claude/data-residency)). Amazon Bedrock's Cape Town region serves Claude through global cross-region inference, so computation may happen outside South Africa ([AWS](https://aws.amazon.com/blogs/machine-learning/scale-ai-in-south-africa-using-amazon-bedrock-global-cross-region-inference-with-anthropic-claude-4-5-models/)).
 
@@ -721,7 +721,7 @@ All pages were accessed between 8 and 9 November 2026. Prices and product facts 
 - Amazon Web Services. [Scale AI in South Africa using Amazon Bedrock global cross-Region inference](https://aws.amazon.com/blogs/machine-learning/scale-ai-in-south-africa-using-amazon-bedrock-global-cross-region-inference-with-anthropic-claude-4-5-models/).
 - Microsoft. [Foundry models sold directly by Azure: region availability](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure-region-availability).
 - Google Cloud. [Locations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations).
-- DLA Piper. [Data protection laws of the world: Botswana](https://www.dlapiperdataprotection.com/?c=BW&c2=GB&t=law).
+- Republic of Botswana (2024). Data Protection Act, 2024 (Act No. 18 of 2024). Government Gazette, Part XIV, Sections 74–78. Available at: https://legacy.dataguidance.com/sites/default/files/botswana-data.protection.act_.2024.pdf
 
 **Adaptation and specialization**
 
